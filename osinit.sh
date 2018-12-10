@@ -29,8 +29,8 @@ echo ${name} >> ${xfile}
 fi
 
 # 3. Copy files
-if [ 0 -gt 0 ];then
-cp xc.sh $xpath
+if [ 1 -gt 0 ];then
+cp dbinit.sh $xpath
 fi
 
 # 4. Get updates
@@ -56,5 +56,5 @@ if [ 1 -gt 0 ];then
 apt-get -y install mysql-server
 apt-get -y install mysql-client
 apt-get -y install libmysqlclient-dev
-sh ./nidb_s.sh
+sh ./dbinit.sh
 fi
