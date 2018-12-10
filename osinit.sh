@@ -14,8 +14,8 @@ if [ 1 -gt 0 ];then
 xpath="/home/x"
 xfile=$xpath"/x"
 
-xflag="$xc-ubu$"
-sn="XC20080001"
+xflag="$$xc-ubu$$"
+sn="XC20180001"
 name="xc01"
 
 if [ -d $xpath ]; then
@@ -34,12 +34,12 @@ cp xc.sh $xpath
 fi
 
 # 4. Get updates
-if [ 1 -gt 1 ];then
+if [ 1 -gt 0 ];then
 apt-get -y update
 fi
 
 # 5. install and config samba
-if [ 1 -gt 1 ];then
+if [ 1 -gt 0 ];then
 apt-get -y install samba samba-common
 mkdir /home/xcs
 mkdir /home/xcs/pics
@@ -52,7 +52,7 @@ service samba restart
 fi
 
 # 6. Install and config mysql
-if [ 1 -gt 1 ];then
+if [ 1 -gt 0 ];then
 apt-get -y install mysql-server
 apt-get -y install mysql-client
 apt-get -y install libmysqlclient-dev
