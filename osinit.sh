@@ -32,3 +32,29 @@ fi
 if [ 0 -gt 0 ];then
 cp xc.sh $xpath
 fi
+
+# 4. Get updates
+if [ 1 -gt 1 ];then
+apt-get -y update
+fi
+
+# 5. install and config samba
+if [ 1 -gt 1 ];then
+apt-get -y install samba samba-common
+mkdir /home/xcs
+mkdir /home/xcs/pics
+chmod -R 777 /home/xs
+sed -i '/max log size = 1000/asecurity = user' /etc/samba/smb.conf
+sed -i '$a [xcs]\ncomment = xCloud Share Folder\npath = /home/xs\nbrowseable = yes\nwritable = yes' /etc/samba/smb.conf
+useradd xc01
+(echo 123456; echo 123456)|smbpasswd -a xc01
+service samba restart
+fi
+
+# 6. Install and config mysql
+if [ 1 -gt 1 ];then
+apt-get -y install mysql-server
+apt-get -y install mysql-client
+apt-get -y install libmysqlclient-dev
+sh ./nidb_s.sh
+fi
