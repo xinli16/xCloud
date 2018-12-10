@@ -14,7 +14,7 @@ if [ 1 -gt 0 ];then
 xpath="/home/x"
 xfile=$xpath"/x"
 
-xflag="xc-ubu201820182018"
+xflag="xc-ubu20181818"
 sn="XC20180001"
 name="xc01"
 
