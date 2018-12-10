@@ -13,7 +13,8 @@
 if [ 1 -gt 0 ];then
 xpath="/home/x"
 xfile=$xpath"/x"
-xflag="xc-ubu"
+
+xflag="$xc-ubu$"
 sn="XC20080001"
 name="xc01"
 
