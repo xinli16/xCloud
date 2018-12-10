@@ -11,7 +11,7 @@
 
 # 2. Create x-folder and write sn and name of system
 if [ 1 -gt 0 ];then
-xpath="/home/x"
+xpath="/home/xl"
 xfile=$xpath"/x"
 xflag="xc-ubu"
 sn="XC20080001"
